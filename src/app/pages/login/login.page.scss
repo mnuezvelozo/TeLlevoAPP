@@ -1,0 +1,19 @@
+.centrar{
+    text-align: center;
+    top: 50%;
+}
+
+ion-content{
+    --ion-background-color: #fff;
+}
+
+.background-container{
+    height: 95vh;
+    width: 100%;
+    display: flex;
+    background: url(../../../assets/duoc1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    flex-direction: column;
+}

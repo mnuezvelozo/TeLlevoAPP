@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="centrar">Inicio de sesión</ion-title>
+  </ion-toolbar>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</ion-header>
+
+<ion-content>
+  <div class="background-container">
+    <ion-card class="ion-padding">
+      <ion-text color="primary" class="ion-text-capitalize">
+        <h2 class="centrar">Bienvenido a TeLlevoAPP <ion-icon name="earth-outline"></ion-icon>
+        </h2>
+      </ion-text>
+
+      <form #frmLogin="ngForm" (ngSubmit)="login()">
+        <ion-item>
+          <ion-label position="floating">Correo</ion-label>
+          <ion-input required name="correo" [(ngModel)]="credenciales.correo"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input required type="password" name="password" [(ngModel)]="credenciales.password"> </ion-input>
+        </ion-item>
+        <br>
+
+      <br>
+      <ion-button block color="success" type="submit" expand="block" [disabled]="frmLogin.invalid">
+        Ingresar
+      </ion-button>
+      </form>
+      <br>
+
+      <ion-button routerLink="/registro" color="primary" expand="block">
+        Registrarse
+      </ion-button>
+
+      <br>
+
+      <ion-button routerLink="/recuperarpass" expand="block" fill="clear" shape="round">
+        ¿Has olvidado tu contraseña?
+      </ion-button>
+    </ion-card>
+  </div>
+</ion-content>

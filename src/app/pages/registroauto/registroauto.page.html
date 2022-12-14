@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button mode="ios" defaultHref="home" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Programar Viaje</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-header collapse="condense">
+  </ion-header >
+  <ion-item>
+    <ion-label position="floating"><ion-icon name="bag-check-outline"></ion-icon>  Patente </ion-label >
+    <ion-input required type="text" placeholder="Ej: BK-JW-98" required #txtPatente> </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"> <ion-icon name="person-circle-outline"></ion-icon> Nombre Chofer</ion-label>
+    <ion-input required type="text" placeholder="Ej: Juan Carlos" #txtNombreChofer></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"> <ion-icon name="speedometer-outline"></ion-icon> Detalles del vehiculo</ion-label>
+    <ion-input required type="text" placeholder="Ej: Color Rojo - 2 puertas"  #txtDetalle></ion-input>
+  </ion-item>  <ion-item>
+    <ion-label position="floating"><ion-icon name="location-outline"></ion-icon> Destino</ion-label>
+    <ion-input required type="text" placeholder="Ej: Coronel"  #txtDestino></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"><ion-icon name="people-outline"></ion-icon> Disponibilidad</ion-label>
+    <ion-input min="1" max="6" required type="text" placeholder="Ej: 4 asientos disponibles"  #txtDisponibilidad></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"><ion-icon name="stopwatch-outline"></ion-icon> Hora De Salida</ion-label>
+    <ion-input required type="text" placeholder="Ej: 15:50hrs"  #txtHora></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"><ion-icon name="wallet-outline"></ion-icon> Precio</ion-label>
+    <ion-input min="500" maxlength="5" required type="number" placeholder="Ej: $3.500"  #txtPrecio> $</ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"><ion-icon name="wallet-outline"></ion-icon> Fono </ion-label>
+    <ion-input max="9" required type="number" placeholder="Ej: 987776655"  #txtFono> +56 -  </ion-input>
+  </ion-item>
+  <br>
+
+</ion-content>
+

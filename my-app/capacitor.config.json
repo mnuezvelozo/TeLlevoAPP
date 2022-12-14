@@ -1,0 +1,11 @@
+{
+  "appId": "com.aplicacion.tellevoapp",
+  "appName": "aplicacion",
+  "bundledWebRuntime": false,
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}

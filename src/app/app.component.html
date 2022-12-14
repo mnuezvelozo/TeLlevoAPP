@@ -1,0 +1,25 @@
+<ion-app>
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="dark">
+        <ion-title>Menú</ion-title>
+        <ion-icon slot="end" name="close" size="large" class="ion-padding" (click)="cerrar1()" (click)="cerrar()" (click)="cerrarstorage()"></ion-icon>
+      </ion-toolbar>
+      
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item routerLink="/home" (click)="cerrar1()" detail>Home</ion-item>
+        <ion-item routerLink="/perfil" (click)="cerrar1()" *ngIf="login"  detail>Perfil</ion-item>
+        <ion-item routerLink="/listado" (click)="cerrar1()" *ngIf="login"  detail>Verificar Vehiculos</ion-item>
+        <ion-item routerLink="/registroauto2" (click)="cerrar1()" *ngIf="login"  detail>Programar viaje</ion-item>
+        <!-- <ion-item routerLink="/solicitudes" (click)="cerrar1()" detail>Solicitud de pasajeros</ion-item> -->
+        <ion-item routerLink="/login" (click)="cerrar1()" (click)="cerrar()" (click)="cerrarstorage()" *ngIf="login"  detail>Cerrar sesión</ion-item>
+        <ion-item routerLink="/login" (click)="cerrar1()" *ngIf="login == false"  detail> Login </ion-item>
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

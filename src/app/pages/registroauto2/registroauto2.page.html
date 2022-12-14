@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button mode="ios" defaultHref="home" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Programar Viaje </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="background-container">
+    <ion-card class="ion-padding">
+      <ion-header collapse="condense">
+      </ion-header>
+      <form #frmRegistro="ngForm" (ngSubmit)="onSubmit()">
+        <ion-item>
+          <ion-label position="floating">
+            <ion-icon name="bag-check-outline"></ion-icon> Patente
+          </ion-label>
+          <ion-input required type="text" maxlength="8" placeholder="Ej: BK-JW-98" name="patente"
+            [(ngModel)]="viajes.patentevehiculo"> </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">
+            <ion-icon name="person-circle-outline"></ion-icon> Nombre Chofer
+          </ion-label>
+          <ion-input required type="text" maxlength="35" placeholder="Ej: Juan Carlos" name="nombrechofer"
+            [(ngModel)]="viajes.nombrechofer"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">
+            <ion-icon name="speedometer-outline"></ion-icon> Detalles del vehiculo
+          </ion-label>
+          <ion-input required type="text" maxlength="30" placeholder="Ej: Color Rojo - 2 puertas" name="detalles"
+            [(ngModel)]="viajes.detallevehiculo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">
+            <ion-icon name="location-outline"></ion-icon> Destino
+          </ion-label>
+          <ion-input required type="text" maxlength="20" placeholder="Ej: Coronel" name="Destino"
+            [(ngModel)]="viajes.destino"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">
+            <ion-icon name="people-outline"></ion-icon> Disponibilidad
+          </ion-label>
+          <ion-input required type="number" maxlength="1" placeholder="Ej: 4 " name="disponibilidad"
+            [(ngModel)]="viajes.disponibilidad">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">
+            <ion-icon name="stopwatch-outline"></ion-icon> Hora De Salida
+          </ion-label>
+          <ion-input required type="time" placeholder="Ej: 15:50hrs" name="horasalida" [(ngModel)]="viajes.horasalida">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">
+            <ion-icon name="wallet-outline"></ion-icon> Precio
+          </ion-label>
+          <ion-input required type="number" maxlength="5" placeholder="Ej: $3.500" name="precio"
+            [(ngModel)]="viajes.precio"> $</ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">
+            <ion-icon name="wallet-outline"></ion-icon> Fono
+          </ion-label>
+          <ion-input required type="number" maxlength="8" placeholder="Ej: 87776655" name="fono"
+            [(ngModel)]="viajes.fono" digits gte="18" lte="120"> +56- </ion-input>
+        </ion-item>
+        <ion-button expand="block" class="ion-margin-top" type="submit" color="success"
+          [disabled]="frmRegistro.invalid">
+          Registrar Viaje
+        </ion-button>
+      </form>
+    </ion-card>
+  </div>
+</ion-content>

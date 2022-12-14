@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+    <ion-title> Registro </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="background-container">
+  <ion-card class="ion-padding">
+    <h1 class="centrarblanco">Formulario de registro <ion-icon name="person-circle-outline"></ion-icon> </h1>
+    <form #frmRegistro="ngForm" (ngSubmit)="onSubmit()">
+      <ion-item>
+        <ion-label position="floating">Nombre Completo</ion-label>
+        <ion-input required name="nombre" [(ngModel)]="datos.nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Correo electronico</ion-label>
+        <ion-input required name="nombre" name="correo" [(ngModel)]="datos.correo"> </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Telefono Celular</ion-label>
+        <ion-input required name="telefono" type="number" [(ngModel)]="datos.telefono"> </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Carrera</ion-label>
+        <ion-input required name="carrera" [(ngModel)]="datos.carrera"> </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input required name="password" type="password" [(ngModel)]="datos.password"> </ion-input>
+      </ion-item>
+
+      <ion-button expand="block" class="ion-margin-top" type="submit" color="success" [disabled]="frmRegistro.invalid">
+        Registrar Usuario
+      </ion-button>
+    </form>
+  </ion-card>
+</div>
+</ion-content>

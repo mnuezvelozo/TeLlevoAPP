@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button mode="ios" defaultHref="home" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Listado de viajes disponibles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card *ngFor="let item of items" >
+  <ion-card-header>
+    <ion-card-title class="centrado">Destino: {{item.destino}}</ion-card-title> <br>
+    <img src="https://img.freepik.com/vector-premium/navegacion-aplicacion-hay-destino-llegar-al-mapa-gps-destino_403715-36.jpg" class="ion-padding" />
+
+  </ion-card-header>
+    <ion-list>
+      <ion-item>
+        <ion-label>Nombre Chofer: {{item.nombrechofer}}</ion-label> 
+      </ion-item>
+      <ion-item>
+        <ion-label>Patente: {{item.patentevehiculo}}</ion-label> 
+      </ion-item>
+      <ion-item>
+        <ion-label>Detalle del vehiculo: {{item.detallevehiculo}}</ion-label> 
+      </ion-item>
+      <ion-item>
+        <ion-label>Disponibilidad: {{item.disponibilidad}}</ion-label> 
+      </ion-item>
+      <ion-item>
+        <ion-label>Hora Salida {{item.horasalida}}</ion-label> 
+      </ion-item>
+      <ion-item>
+        <ion-label>Precio: ${{item.precio}}</ion-label> 
+      </ion-item>
+      <ion-item>
+        <ion-label>Numero de telefono: {{item.fono}}</ion-label> 
+      </ion-item>
+      <br>
+      <div class="centradoboton">
+      <ion-button (click)="agregar()" color="success" shape="round" >
+        Solicitar Viaje
+      </ion-button>
+    </div>
+
+    </ion-list>
+
+
